@@ -21,6 +21,7 @@ Please look examples for Vagrant(examples/vagrant)
 - nginx
 - mysql
 - mongodb
+- redis
 
 
 ## vars
@@ -37,6 +38,7 @@ Please look examples for Vagrant(examples/vagrant)
 - databases
   - mysql
   - mongodb
+  - redis
 - work_dir
 - project_name
 - virtualenv_path
