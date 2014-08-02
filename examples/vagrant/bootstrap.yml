@@ -14,3 +14,4 @@
     - {role: ~/ansible/common-roles/mongodb, when: "'mongodb' in databases"}
     - {role: ~/ansible/common-roles/redis, when: "'redis' in databases"}
     - {role: ~/ansible/common-roles/memcached, when: "'memcached' in databases"}
+    - ~/ansible/common-roles/supervisord

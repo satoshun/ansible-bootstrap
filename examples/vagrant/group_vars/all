@@ -3,7 +3,7 @@ user: vagrant
 home: "/home/{{ user }}"
 project_home: "{{ home }}/{{ project_name }}"
 virtualenv_path: "/home/{{ user }}/.virtualenvs/{{ project_name }}"
-languages: ['python3', 'java', 'go', 'ruby', 'nodejs'] # python, python27, python3, java, go, ruby, nodejs
+languages: ['python', 'python3', 'java', 'go', 'ruby', 'nodejs'] # python, python27, python3, java, go, ruby, nodejs
 go_path: "{{ home }}/go"
 
 databases: ['mysql', 'mongodb', 'redis', 'memcached'] # mysql, mongodb, redis, memcached

@@ -1,0 +1,19 @@
+---
+- name: install supervisor
+  pip: name={{ item }} state=present
+  with_items:
+    - setuptools
+    - supervisor
+  notify: start supervisord
+
+- name: create a directory for supervisord
+  file:
+    path=/etc/supervisor/conf.d
+    state=directory
+    recurse=yes
+    mode=0755
+
+- name: copy supervisord.conf
+  template:
+    src=supervisord.conf.j2
+    dest=/etc/supervisord.conf

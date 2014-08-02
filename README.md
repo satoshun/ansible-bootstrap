@@ -23,6 +23,7 @@ Please look examples for Vagrant(examples/vagrant)
 - mongodb
 - redis
 - memcached
+- supervisord
 
 
 ## vars
