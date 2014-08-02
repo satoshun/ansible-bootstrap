@@ -16,6 +16,7 @@ Please look examples for Vagrant(examples/vagrant)
 - docker
 - java
 - go
+- ruby
 
 
 ## vars
@@ -25,6 +26,9 @@ Please look examples for Vagrant(examples/vagrant)
   - python
     - python27
     - python3
+  - java
+  - go
+  - ruby
 - work_dir
 - project_name
 - virtualenv_path

@@ -1,0 +1,10 @@
+---
+- name: install rvm
+  shell: curl -L get.rvm.io | bash -s stable
+  when: "'ruby' in languages"
+
+- name: install ruby
+  shell: >
+    executable=/bin/bash
+    source /etc/profile.d/rvm.sh && rvm install {{ ruby_version }}
+  when: "'ruby' in languages"

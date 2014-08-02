@@ -3,7 +3,8 @@ user: vagrant
 home: "/home/{{ user }}"
 project_home: "{{ home }}/{{ project_name }}"
 virtualenv_path: "/home/{{ user }}/.virtualenvs/{{ project_name }}"
-languages: ['python3', 'java', 'go'] # python, python27, python3, java, go
+languages: ['python3', 'java', 'go', 'ruby'] # python, python27, python3, java, go, ruby
 go_path: "{{ home }}/go"
+ruby_version: 2.1
 
 mongo_dbpath: /data/db
