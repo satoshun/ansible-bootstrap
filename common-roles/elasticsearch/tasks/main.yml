@@ -1,0 +1,11 @@
+---
+- name: copy repo
+  template:
+    src=elasticsearch.repo.j2
+    dest=/etc/yum.repos.d/elasticsearch.repo
+
+- name: install elasticsearch
+  yum: name=elasticsearch state=present
+  notify: start elasticsearch
+
+- include: kibana.yml

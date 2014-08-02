@@ -1,0 +1,17 @@
+---
+- name: get kibana
+  get_url:
+    url=https://download.elasticsearch.org/kibana/kibana/kibana-{{ kibana_version }}.tar.gz
+    dest={{ home }}/src/
+
+- name: unpack kibana
+  command: tar zxf kibana-{{ kibana_version }}.tar.gz chdir={{ home }}/src/
+
+- name: cp kibana for nginx
+  command: cp -r kibana-{{ kibana_version }} /usr/share/kibana3 chdir={{ home }}/src/
+
+- name: kibana nginx conf
+  template:
+    src=kibana.conf.j2
+    dest=/etc/nginx/conf.d/kibana.conf
+  notify: restart nginx

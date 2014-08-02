@@ -24,6 +24,7 @@ Please look examples for Vagrant(examples/vagrant)
 - redis
 - memcached
 - supervisord
+- elasticsearch
 
 
 ## vars

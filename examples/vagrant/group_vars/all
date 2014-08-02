@@ -11,3 +11,8 @@ databases: ['mysql', 'mongodb', 'redis', 'memcached'] # mysql, mongodb, redis, m
 ruby_version: 2.1
 
 mongo_dbpath: /data/db
+
+elasticsearch_version: 1.3
+kibana_version: 3.1.0
+kibana_server_name: localhost
+kibana_dir: /usr/share/kibana3
