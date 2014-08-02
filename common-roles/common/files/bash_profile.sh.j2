@@ -1,0 +1,60 @@
+### basic
+export PATH=$PATH:/usr/local/bin
+export HISTSIZE=2000
+
+
+### etc
+alias l='ls'
+alias q='exit'
+
+
+### python
+alias ipy="ipython"
+
+
+### ruby
+export GEM_HOME=$HOME/gems
+export PATH=$GEM_HOME/bin:$PATH
+
+
+### custom
+alias ser='python -m CGIHTTPServer'
+
+
+### chef
+export PATH=/opt/chef/embedded/bin:$PATH
+
+
+### golang
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
+
+### commands
+alias ls="ls -G"
+
+function current_branch() {
+    ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+    echo ${ref#refs/heads/}
+}
+
+
+# start git
+alias ggpull='git pull origin $(current_branch)'
+alias gl='git pull'
+alias glc='git pull origin $(current_branch)'
+alias ggpush='git push origin $(current_branch)'
+alias ggpnp='git pull origin $(current_branch) && git push origin $(current_branch)'
+alias gst="git status"
+alias gsp="git stash pop"
+alias gsa="git stash"
+alias git-conflict='git status | python ~/SkyDrive/repository/utility/git/git_conflict_open.py'
+alias git-untracked-delete='git status | python ~/SkyDrive/repository/utility/git/git_untracked_delete.py'
+
+alias cl='clear'
+alias l='ls'
+alias ll='ls -l'
+alias p="pwd"
+
+# common
+export LD_LIBRARY_PATH=/usr/local/lib

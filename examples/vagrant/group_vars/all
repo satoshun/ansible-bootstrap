@@ -1,0 +1,8 @@
+project_name: test
+user: vagrant
+home: "/home/{{ user }}"
+project_home: "{{ home }}/{{ project_name }}"
+virtualenv_path: "/home/{{ user }}/.virtualenvs/{{ project_name }}"
+languages: ['python']
+
+mongo_dbpath: /data/db

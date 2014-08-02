@@ -1,0 +1,59 @@
+---
+- name: install epel
+  yum: name=http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm state=present
+
+- name: install remi
+  yum: name=http://rpms.famillecollet.com/enterprise/remi-release-6.rpm state=present
+
+- name: install ius
+  yum: name=http://dl.iuscommunity.org/pub/ius/stable/CentOS/6/x86_64/ius-release-1.0-11.ius.centos6.noarch.rpm state=present
+
+- name: install mysql-community
+  yum: name=https://dev.mysql.com/get/mysql-community-release-el6-5.noarch.rpm state=present
+
+- name: clean up yum
+  command: yum clean all
+
+- name: yum update
+  yum: name=* state=latest
+
+- name: install the 'Development tools' package group
+  yum: name="@Development tools" state=present
+
+- name: install common packages
+  yum: name={{ item }} state=present
+  with_items:
+    - bash-completion
+    - bzip2-devel
+    - cyrus-sasl-devel
+    - kernel-devel
+    - libcurl-devel
+    - libevent-devel
+    - libjpeg
+    - libjpeg-devel
+    - libpng 
+    - libpng-devel 
+    - libxslt-devel
+    - make
+    - ncurses-devel
+    - openssl
+    - openssl-devel
+    - perl-devel
+    - readline-devel
+    - rsyslog 
+    - sqlite-devel
+    - tk-devel
+    - zlib-devel
+
+- name: install server management command packages
+  yum: name={{ item }} state=present
+  with_items:
+    - bind-utils
+    - glances
+    - lsof
+    - sysstat
+    - tcpdump
+    - telnet
+    - tig
+    - vim
+    - wget

@@ -1,0 +1,11 @@
+---
+- name: make directories
+  sudo: no
+  file: 
+    path={{ home }}/{{ item }}
+    state=directory
+    owner={{ user }}
+    group={{ user }}
+  with_items:
+    - src
+    - tmp
