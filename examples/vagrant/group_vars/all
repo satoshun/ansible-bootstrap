@@ -6,6 +6,8 @@ virtualenv_path: "/home/{{ user }}/.virtualenvs/{{ project_name }}"
 languages: ['python3', 'java', 'go', 'ruby', 'nodejs'] # python, python27, python3, java, go, ruby, nodejs
 go_path: "{{ home }}/go"
 
+databases: ['mysql'] # mysql
+
 ruby_version: 2.1
 
 mongo_dbpath: /data/db

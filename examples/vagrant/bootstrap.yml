@@ -9,3 +9,4 @@
     - ~/ansible/common-roles/ruby
     - ~/ansible/common-roles/nginx
     - ~/ansible/common-roles/nodejs
+    - ~/ansible/common-roles/mysql

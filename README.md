@@ -19,6 +19,7 @@ Please look examples for Vagrant(examples/vagrant)
 - ruby
 - nodejs
 - nginx
+- mysql
 
 
 ## vars
@@ -32,6 +33,8 @@ Please look examples for Vagrant(examples/vagrant)
   - go
   - ruby
   - nodejs
+- databases
+  - mysql
 - work_dir
 - project_name
 - virtualenv_path
