@@ -1,0 +1,8 @@
+---
+- name: install nodejs
+  yum: name={{ item }} state=present
+  with_items:
+    - nodejs
+    - nodejs-devel
+    - npm
+  when: "'nodejs' in languages"

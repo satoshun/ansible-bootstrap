@@ -17,6 +17,7 @@ Please look examples for Vagrant(examples/vagrant)
 - java
 - go
 - ruby
+- nodejs
 - nginx
 
 
@@ -30,6 +31,7 @@ Please look examples for Vagrant(examples/vagrant)
   - java
   - go
   - ruby
+  - nodejs
 - work_dir
 - project_name
 - virtualenv_path

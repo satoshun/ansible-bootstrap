@@ -8,3 +8,4 @@
     - ~/ansible/common-roles/go
     - ~/ansible/common-roles/ruby
     - ~/ansible/common-roles/nginx
+    - ~/ansible/common-roles/nodejs
