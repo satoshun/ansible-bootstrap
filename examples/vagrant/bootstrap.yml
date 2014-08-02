@@ -4,9 +4,10 @@
   roles:
     - ~/ansible/common-roles/common
     - ~/ansible/common-roles/docker
-    - ~/ansible/common-roles/java
-    - ~/ansible/common-roles/go
-    - ~/ansible/common-roles/ruby
+    - {role: ~/ansible/common-roles/python, when: "'python' in languages"}
+    - {role: ~/ansible/common-roles/java, when: "'java' in languages"}
+    - {role: ~/ansible/common-roles/go, when: "'go' in languages"}
+    - {role: ~/ansible/common-roles/ruby, when: "'ruby' in languages"}
+    - {role: ~/ansible/common-roles/nodejs, when: "'nodejs' in languages"}
     - ~/ansible/common-roles/nginx
-    - ~/ansible/common-roles/nodejs
-    - ~/ansible/common-roles/mysql
+    - {role: ~/ansible/common-roles/mysql, when: "'mysql' in databases"}

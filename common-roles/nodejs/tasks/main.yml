@@ -5,4 +5,3 @@
     - nodejs
     - nodejs-devel
     - npm
-  when: "'nodejs' in languages"

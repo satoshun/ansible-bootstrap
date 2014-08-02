@@ -3,16 +3,13 @@
   yum: name={{ item }} state=present
   with_items:
     - java-1.7.0-openjdk
-  when: "'java' in languages"
 
 - name: get maven repo
   get_url:
     url=http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo
     dest=/etc/yum.repos.d/epel-apache-maven.repo
-  when: "'java' in languages"
 
 - name: install maven
   yum: name={{ item }} state=present
   with_items:
     - apache-maven
-  when: "'java' in languages"

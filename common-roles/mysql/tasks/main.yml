@@ -6,8 +6,7 @@
     - mysql-devel
   notify:
     - mysql start
-  when: "'mysql' in databases"
 
 - name: install python client of mysql
   yum: name=MySQL-python state=present
-  when: "'mysql' in databases and 'python' in languages"
+  when: "'python' in languages"

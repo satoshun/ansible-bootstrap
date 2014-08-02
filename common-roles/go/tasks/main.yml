@@ -4,7 +4,6 @@
   with_items:
     - mercurial
     - golang
-  when: "'go' in languages"
 
 - name: mkdir working directory for go
   sudo: no
@@ -13,10 +12,8 @@
     state=directory
     owner={{ user }}
     group={{ user }}
-  when: "'go' in languages"
 
 - name: copy setting file
   template:
     src=go.sh.j2
     dest=/etc/profile.d/go.sh
-  when: "'go' in languages"
