@@ -20,6 +20,7 @@ Please look examples for Vagrant(examples/vagrant)
 - nodejs
 - nginx
 - mysql
+- mongodb
 
 
 ## vars
@@ -35,6 +36,7 @@ Please look examples for Vagrant(examples/vagrant)
   - nodejs
 - databases
   - mysql
+  - mongodb
 - work_dir
 - project_name
 - virtualenv_path

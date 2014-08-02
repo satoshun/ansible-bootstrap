@@ -11,3 +11,4 @@
     - {role: ~/ansible/common-roles/nodejs, when: "'nodejs' in languages"}
     - ~/ansible/common-roles/nginx
     - {role: ~/ansible/common-roles/mysql, when: "'mysql' in databases"}
+    - {role: ~/ansible/common-roles/mongodb, when: "'mongodb' in databases"}

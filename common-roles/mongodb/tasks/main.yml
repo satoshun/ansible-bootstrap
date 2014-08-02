@@ -1,0 +1,27 @@
+---
+- name: create the repository for 10Gen  
+  copy: src=mongodb.repo dest=/etc/yum.repos.d/mongodb.repo
+
+- name: create the mongod user
+  user: name=mongod comment="MongoDB"
+
+- name: install the mongodb package
+  yum: name={{ item }} state=present enablerepo=mongodb
+  with_items:
+    - mongodb-org
+  notify:
+    - start mongod
+
+- name: create dbpath
+  file:
+    path={{ mongo_dbpath }}
+    state=directory
+    owner=mongod
+    group=mongod
+
+- name: copy mongod.conf
+  template:
+    src=mongod.conf.j2
+    dest=/etc/mongod.conf
+  notify:
+    - start mongod
