@@ -1,0 +1,24 @@
+server {
+    listen 80;
+    server_name {{ host_name }};
+
+    access_log  /var/log/nginx/{{ project_name }}.log;
+    error_log   /var/log/nginx/{{ project_name }}-error.log;
+
+    # for static files
+    location ~ /static/.*\.(jpg|JPG|gif|GIF|png|PNG|swf|SWF|css|CSS|js|JS|inc|INC|ico|ICO) {
+        root    {{ project_static_dir }};
+        index   index.html;
+        log_not_found   on;
+        expires 30d;
+        break;
+    }
+
+    # for uwsgi
+    location / {
+        proxy_cache_valid   200   1m;
+        proxy_cache_valid   404   5m;
+        include uwsgi_params;
+        uwsgi_pass unix:/tmp/{{ project_name }}.sock;
+    }
+}

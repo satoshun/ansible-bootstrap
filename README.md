@@ -26,6 +26,7 @@ Please look examples for Vagrant(examples/vagrant)
 - supervisord
 - elasticsearch
 - td-agent
+- uwsgi
 
 
 ## vars

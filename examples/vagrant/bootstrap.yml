@@ -17,3 +17,4 @@
     - ~/ansible/common-roles/supervisord
     - ~/ansible/common-roles/elasticsearch
     - ~/ansible/common-roles/td-agent
+    - ~/ansible/common-roles/uwsgi

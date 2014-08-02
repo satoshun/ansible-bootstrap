@@ -1,0 +1,23 @@
+---
+- name: install uwsgi
+  sudo: no
+  pip:
+    name=uwsgi
+    virtualenv={{ virtualenv_path }}
+    state=present
+
+- name: conf supervisord for uwsgi
+  template:
+    src=uwsgi.conf.j2
+    dest=/etc/supervisor/conf.d/uwsgi.conf
+    mode=0755
+  sudo: yes
+  notify: restart supervisord
+
+- name: copy nginx configuration
+  template:
+    src=nginx.conf.j2
+    dest=/etc/nginx/conf.d/{{ project_name }}.conf
+    mode=0755
+  sudo: yes
+  notify: restart nginx

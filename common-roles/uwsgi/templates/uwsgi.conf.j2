@@ -1,0 +1,23 @@
+[program:{{ project_name }}_main]
+user={{ user }}
+command={{ virtualenv_path }}/bin/uwsgi
+        --socket /tmp/{{ project_name }}.sock
+        --chmod-socket=666
+        --processes 2
+        --virtualenv {{ virtualenv_path }}
+        --pythonpath {{ project_home }}
+        --module app:create_app()
+        --buffer-size 32768
+        --harakiri 120
+        --max-requests 2000
+        --disable-logging
+        --log-date
+        --ignore-write-errors
+        --disable-write-exception
+autostart=true
+autorestart=true
+stdout_logfile = /var/log/supervisor/%(program_name)s.log
+stdout_logfile_maxbytes = 10MB
+stdout_logfile_backups = 10
+stderr_logfile = /var/log/supervisor/%(program_name)s-error.log
+stopsignal=INT
