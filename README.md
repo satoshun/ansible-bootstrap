@@ -25,6 +25,7 @@ Please look examples for Vagrant(examples/vagrant)
 - memcached
 - supervisord
 - elasticsearch
+- td-agent
 
 
 ## vars

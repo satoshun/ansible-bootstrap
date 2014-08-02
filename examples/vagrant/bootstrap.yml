@@ -16,3 +16,4 @@
     - {role: ~/ansible/common-roles/memcached, when: "'memcached' in databases"}
     - ~/ansible/common-roles/supervisord
     - ~/ansible/common-roles/elasticsearch
+    - ~/ansible/common-roles/td-agent
