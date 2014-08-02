@@ -13,6 +13,7 @@ Please look examples for Vagrant(examples/vagrant)
 ## roles
 
 - common
+- docker
 
 
 ## vars

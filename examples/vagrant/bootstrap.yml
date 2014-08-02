@@ -3,3 +3,4 @@
   sudo: yes
   roles:
     - ~/ansible/common-roles/common
+    - ~/ansible/common-roles/docker
