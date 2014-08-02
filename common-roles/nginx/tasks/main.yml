@@ -1,0 +1,10 @@
+---
+- name: create the repository for nginx
+  copy: src=nginx.repo dest=/etc/yum.repos.d/nginx.repo
+
+- name: install nginx
+  yum: name=nginx enablerepo=nginx state=present
+  notify: start nginx
+  tags:
+    - nginx
+    - install

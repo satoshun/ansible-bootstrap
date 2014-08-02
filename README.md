@@ -17,6 +17,7 @@ Please look examples for Vagrant(examples/vagrant)
 - java
 - go
 - ruby
+- nginx
 
 
 ## vars
