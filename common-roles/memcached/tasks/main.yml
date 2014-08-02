@@ -1,0 +1,9 @@
+---
+- name: install memcached packages
+  yum: name={{ item }} state=present enablerepo=remi disablerepo=base
+  with_items:
+    - memcached
+    - libmemcached-devel
+    - libmemcached-last
+    - libmemcached-last-devel
+  notify: start memcached

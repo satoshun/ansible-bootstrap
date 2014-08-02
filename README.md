@@ -22,6 +22,7 @@ Please look examples for Vagrant(examples/vagrant)
 - mysql
 - mongodb
 - redis
+- memcached
 
 
 ## vars
@@ -39,6 +40,7 @@ Please look examples for Vagrant(examples/vagrant)
   - mysql
   - mongodb
   - redis
+  - memcached
 - work_dir
 - project_name
 - virtualenv_path
