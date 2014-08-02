@@ -1,0 +1,23 @@
+---
+- name: install python
+  yum: name={{ item }} state=present
+  with_items:
+    - python-devel
+    - python-libs
+    - python-passlib
+    - python-pip
+    - python-setuptools
+  when: "'python' in languages or 'python3' in languages"
+
+- name: copy virtualenv setting file
+  copy:
+    src=virtualenv.sh
+    dest=/etc/profile.d/virtualenv.sh
+  when: "'python' in languages or 'python3' in languages"
+
+- name: install and update virtualenv
+  pip: name={{ item }} state=latest
+  with_items:
+    - virtualenv
+    - virtualenvwrapper
+  when: "'python' in languages or 'python3' in languages"

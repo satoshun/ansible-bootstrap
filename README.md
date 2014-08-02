@@ -20,6 +20,8 @@ Please look examples for Vagrant(examples/vagrant)
 - user
 - languages
   - python
+    - python27
+    - python3
 - work_dir
 - project_name
 - virtualenv_path
