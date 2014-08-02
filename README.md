@@ -15,6 +15,7 @@ Please look examples for Vagrant(examples/vagrant)
 - common
 - docker
 - java
+- go
 
 
 ## vars
